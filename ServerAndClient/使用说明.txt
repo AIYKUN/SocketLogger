@@ -1,0 +1,17 @@
+文件列表
+1. config.property      LogClient的配置文件
+2. LogClient.jar        客户端可引用的jar包
+3. LogServer.jar        可执行的logServerjar包
+4. startLogServer.bat   开启LogServer服务界面，如果系统可以执行logServerjar，本文件忽略
+
+LogClient的创建方式有两种:
+
+方法一:   固定IP和端口
+LogClient logClient = new LogClient("127.0.0.1", 9090);
+
+方法二:   配置文件
+config.property
+LogClient logClient = new LogClient(new File("d:\\config.property"));
+
+使用方式请参考LogClient工程中的Test.java,发送log是同步发送的
+
